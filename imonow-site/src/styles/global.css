@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ─────────────────────────────────────────
+   SISTEMA DE DESIGN — IMÓ NOW
+   Um só conjunto de valores. Sem excepções.
+───────────────────────────────────────── */
+:root {
+  /* Superfícies — hierarquia única e clara */
+  --s0: #FFFFFF;        /* branco puro */
+  --s1: #F7F7F5;        /* cinza quase branco */
+  --s2: #EFEFEC;        /* cinza separador */
+  --s3: #1A1A1A;        /* escuro — hero, secções dark */
+  --s4: #111111;        /* preto profundo — footer */
+
+  /* Texto sobre fundo claro */
+  --t-strong:  #0D0D0D;
+  --t-medium:  #444444;
+  --t-soft:    #888888;
+  --t-muted:   #BBBBBB;
+
+  /* Texto sobre fundo escuro */
+  --t-inv-strong:  #FFFFFF;
+  --t-inv-medium:  rgba(255,255,255,0.65);
+  --t-inv-soft:    rgba(255,255,255,0.38);
+
+  /* Bordas */
+  --b-light: rgba(0,0,0,0.08);
+  --b-dark:  rgba(255,255,255,0.08);
+
+  /* Marca */
+  --yellow: #F5C400;
+
+  /* Tipografia */
+  --f: 'Inter', -apple-system, sans-serif;
+
+  /* Raios */
+  --r6:  6px;
+  --r10: 10px;
+  --r14: 14px;
+  --r20: 20px;
+  --r28: 28px;
+
+  /* Espaçamento vertical — escala de 8px */
+  --sp-xs:  16px;
+  --sp-sm:  24px;
+  --sp-md:  48px;
+  --sp-lg:  80px;
+  --sp-xl:  112px;
+  --sp-2xl: 160px;
+
+  /* Largura máxima de texto */
+  --prose: 64ch;
+
+  /* Transição */
+  --tr: 0.18s ease;
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--f);
+  background: var(--s0);
+  color: var(--t-strong);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+button { font-family: var(--f); cursor: pointer; border: none; }
+strong { font-weight: 600; }
+
+/* ── CONTENTOR ── */
+.w {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── SECÇÕES ── */
+.sec     { padding: var(--sp-xl) 0; }
+.sec-sm  { padding: var(--sp-lg) 0; }
+
+/* ── FUNDOS ── */
+.bg-light { background: var(--s1); }
+.bg-dark  { background: var(--s3); }
+
+/* ── DIVISOR ── */
+.rule { width: 100%; height: 1px; background: var(--b-light); }
+
+/* ── TIPOGRAFIA ── */
+
+/* eyebrow — label acima de títulos */
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--t-soft);
+  margin-bottom: 12px;
+}
+.eyebrow-inv { color: var(--t-inv-soft); }
+
+/* títulos — nunca herdam cor do contexto, sempre explícitos */
+.t-d1 {
+  font-size: clamp(48px, 6.5vw, 80px);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -2.5px;
+  color: var(--t-strong);
+}
+.t-d1-inv { color: var(--t-inv-strong); }
+
+.t-h1 {
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  color: var(--t-strong);
+}
+.t-h1-inv { color: var(--t-inv-strong); }
+
+.t-h2 {
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: var(--t-strong);
+}
+
+.t-h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  color: var(--t-strong);
+}
+
+/* corpo — max-width para legibilidade */
+.t-body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--t-medium);
+  max-width: var(--prose);
+}
+.t-body-inv { color: var(--t-inv-medium); }
+
+.t-body-sm {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--t-soft);
+}
+.t-body-sm-inv { color: var(--t-inv-soft); }
+
+/* ── BOTÕES ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--r10);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  transition: var(--tr);
+  white-space: nowrap;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: var(--f);
+}
+.btn-lg { padding: 15px 32px; font-size: 15px; border-radius: var(--r14); }
+.btn-sm { padding: 8px 16px; font-size: 13px; }
+
+/* primário — preto sobre qualquer fundo */
+.btn-p {
+  background: var(--t-strong);
+  color: var(--s0);
+  border-color: var(--t-strong);
+}
+.btn-p:hover { background: #2a2a2a; border-color: #2a2a2a; transform: translateY(-1px); }
+
+/* outline claro — para fundos claros */
+.btn-o {
+  background: transparent;
+  color: var(--t-strong);
+  border-color: var(--b-light);
+}
+.btn-o:hover { border-color: var(--t-strong); background: var(--s1); }
+
+/* outline escuro — para fundos escuros */
+.btn-ow {
+  background: transparent;
+  color: var(--t-inv-strong);
+  border-color: rgba(255,255,255,0.2);
+}
+.btn-ow:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.06); }
+
+/* branco sólido — para fundos escuros */
+.btn-w {
+  background: var(--s0);
+  color: var(--t-strong);
+  border-color: var(--s0);
+}
+.btn-w:hover { background: var(--s1); border-color: var(--s1); transform: translateY(-1px); }
+
+/* ── TAG / CHIP ── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1.5px solid var(--b-light);
+  color: var(--t-soft);
+  background: var(--s0);
+}
+.chip-inv {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
+  color: var(--t-inv-medium);
+}
+
+/* ── LOGO ── */
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.logo-imo  { color: var(--yellow); }
+.logo-now-d { color: var(--t-strong); }
+.logo-now-l { color: var(--t-inv-strong); }
