@@ -7,6 +7,7 @@ import Sobre from './pages/Sobre'
 import Recrutamento from './pages/Recrutamento'
 import Contacto from './pages/Contacto'
 import './styles/global.css'
+import WhatsApp from './components/WhatsApp'
 
 function ScrollTop() {
   const { pathname } = useLocation()
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
       <Footer />
+      <WhatsApp />
     </BrowserRouter>
   )
 }
