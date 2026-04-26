@@ -10,7 +10,7 @@ export default function Footer() {
             <span className="logo-imo">IMÓ</span>
             <span className="logo-now-l">NOW</span>
           </div>
-          <p className="fb-tagline">IMÓ NOW, sua plataforma digital de serviços imobiliários.</p>
+          <p className="fb-tagline">IMÓ NOW, a sua plataforma digital de serviços imobiliários.</p>
           <div className="fb-links">
             <a href="https://instagram.com/imonow.pt" target="_blank" rel="noreferrer">Instagram Imobiliária</a>
             <a href="https://instagram.com/imonow.recrutamento" target="_blank" rel="noreferrer">Instagram Recrutamento</a>

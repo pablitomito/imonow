@@ -43,7 +43,7 @@ export default function Contacto() {
               <a href="https://instagram.com/imonow.recrutamento" target="_blank" rel="noreferrer">@imonow.recrutamento</a>
             </div>
             <div className="ci-tagline">
-              <p>IMÓ NOW, sua plataforma digital de serviços imobiliários.</p>
+              <p>IMÓ NOW, a sua plataforma digital de serviços imobiliários.</p>
             </div>
           </div>
 

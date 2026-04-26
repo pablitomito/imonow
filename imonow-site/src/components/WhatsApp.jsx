@@ -2,7 +2,7 @@ import './WhatsApp.css'
 
 export default function WhatsApp() {
   const numero = '351910882208'
-  const mensagem = encodeURIComponent('Ola! Vim atraves do site da IMO NOW e gostaria de saber mais sobre a venda do meu imovel.')
+  const mensagem = encodeURIComponent('Olá! Vim através do site da IMÓ NOW e gostaria de saber mais sobre a venda do meu imóvel.')
   const url = `https://wa.me/${numero}?text=${mensagem}`
 
   return (
